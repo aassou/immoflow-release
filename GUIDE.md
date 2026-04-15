@@ -11,6 +11,37 @@ Before getting started, make sure you have the following tools installed on your
 - **Node.js** and **NPM**
 - **SQLite** or your preferred database engine (MySQL/PostgreSQL)
 
+## Getting the Repository
+
+### Setting up SSH for GitHub (If needed)
+
+If you don't already have an SSH key set up for your GitHub account to access private repositories, generate one using:
+
+```bash
+# Generate a new SSH key
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# Start the ssh-agent in the background
+eval "$(ssh-agent -s)"
+
+# Add your SSH private key to the ssh-agent
+ssh-add ~/.ssh/id_ed25519
+
+# Display your public key to copy it
+cat ~/.ssh/id_ed25519.pub
+```
+
+Go to your **[GitHub Settings > SSH and GPG keys > New SSH key](https://github.com/settings/keys)**, and paste your copied public key.
+
+### Cloning the Project
+
+Once your SSH key is set up, clone the repository and navigate into the project directory:
+
+```bash
+git clone git@github.com:NeoTechConsultingSARL/immoflow-release.git
+cd immoflow-release
+```
+
 ## Installation & Setup
 
 We have streamlined the setup process using Composer scripts. 
